@@ -37,7 +37,7 @@ class View extends SelectListView
   show: (commandKind) ->
     @initialInput = true
     @storeFocusedElement()
-    @panel ?= atom.workspace.addModalPanel({item: this})
+    @panel ?= atom.workspace.addBottomPanel({item: this})
     @panel.show()
     @setItems(@getItemsForKind(commandKind))
     @focusFilterEditor()
